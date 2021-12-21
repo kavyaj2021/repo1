@@ -1,0 +1,346 @@
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects
+$ ls -lrt
+total 0
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects
+$ git init repo1
+Initialized empty Git repository in D:/Devops/GIT_Projects/repo1/.git/
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects
+$ ls -lrt
+total 0
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:03 repo1/
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects
+$ cd repo1
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ ls -lart
+total 4
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:03 ../
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:03 ./
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:03 .git/
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ rm -rf .git
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1
+$ ls -lart
+total 0
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:03 ../
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:07 ./
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1
+$ git init
+Initialized empty Git repository in D:/Devops/GIT_Projects/repo1/.git/
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ ls -lart
+total 4
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:03 ../
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:10 ./
+drwxr-xr-x 1 DELL 197121 0 Dec 20 18:10 .git/
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ girt status
+bash: girt: command not found
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ vi myfirst.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        myfirst.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git add myfirst.java
+warning: LF will be replaced by CRLF in myfirst.java.
+The file will have its original line endings in your working directory
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   myfirst.java
+
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git commit -m "first commit added 100 lines"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'DELL@DESKTOP-3CJH9AH.(none)')
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git config --global user.email "devopsk2021@gmail.com"
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git config --global user.name "devopsk"
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git list
+git: 'list' is not a git command. See 'git --help'.
+
+The most similar commands are
+        bisect
+        rev-list
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git config --global list
+error: key does not contain a section: list
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git config --global --list
+user.email=devopsk2021@gmail.com
+user.name=devopsk
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=devopsk2021@gmail.com
+user.name=devopsk
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git commit -m "first commit added 100 lines"
+[master (root-commit) 2d2db11] first commit added 100 lines
+ 1 file changed, 1 insertion(+)
+ create mode 100644 myfirst.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ vi myfirst.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ vi second.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   myfirst.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git commit -m "second commit - addd second java and modifed first.java"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   myfirst.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in myfirst.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in second.java.
+The file will have its original line endings in your working directory
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   myfirst.java
+        new file:   second.java
+
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git restore --staged second.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   myfirst.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second.java
+
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in second.java.
+The file will have its original line endings in your working directory
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git commit -m "second commit - addd second java and modifed first.java"
+[master 7ea16f6] second commit - addd second java and modifed first.java
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 second.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ vi second.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git commit -m "third commit - added line in second java "
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in second.java.
+The file will have its original line endings in your working directory
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git commit -m "third commit - added line in second java "
+[master f281f83] third commit - added line in second java
+ 1 file changed, 1 insertion(+)
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git log
+commit f281f837a71c52861466dfbb98f55e8e76a6dee7 (HEAD -> master)
+Author: devopsk <devopsk2021@gmail.com>
+Date:   Mon Dec 20 18:35:02 2021 +0530
+
+    third commit - added line in second java
+
+commit 7ea16f6ee88d8393ba7184e4cd373ede2943fa64
+Author: devopsk <devopsk2021@gmail.com>
+Date:   Mon Dec 20 18:33:06 2021 +0530
+
+    second commit - addd second java and modifed first.java
+
+commit 2d2db116625f406cf876ae54fb0112ab3eab5632
+Author: devopsk <devopsk2021@gmail.com>
+Date:   Mon Dec 20 18:24:34 2021 +0530
+
+    first commit added 100 lines
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git log --oneline
+f281f83 (HEAD -> master) third commit - added line in second java
+7ea16f6 second commit - addd second java and modifed first.java
+2d2db11 first commit added 100 lines
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git reset 7ea16f6
+Unstaged changes after reset:
+M       second.java
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git log
+commit 7ea16f6ee88d8393ba7184e4cd373ede2943fa64 (HEAD -> master)
+Author: devopsk <devopsk2021@gmail.com>
+Date:   Mon Dec 20 18:33:06 2021 +0530
+
+    second commit - addd second java and modifed first.java
+
+commit 2d2db116625f406cf876ae54fb0112ab3eab5632
+Author: devopsk <devopsk2021@gmail.com>
+Date:   Mon Dec 20 18:24:34 2021 +0530
+
+    first commit added 100 lines
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git log --oneline
+7ea16f6 (HEAD -> master) second commit - addd second java and modifed first.java
+2d2db11 first commit added 100 lines
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$ git remote -v
+
+DELL@DESKTOP-3CJH9AH MINGW64 /d/Devops/GIT_Projects/repo1 (master)
+$
